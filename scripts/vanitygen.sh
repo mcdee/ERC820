@@ -1,5 +1,7 @@
 #! /bin/bash
 
+SOLC_VERSION='0.5.2+commit.1df8f40c'
+
 rm -rf tmp
 mkdir tmp
 for i in {0..15}; do
@@ -26,70 +28,70 @@ for VALUE in `seq 0 16 32768`; do
   sed -i '' -Ee "s/^\/\/ IV:.+$/\/\/ IV: $((${VALUE}+15))/1" tmp/15/contracts/ERC820Registry.sol
 
   pushd ./tmp/0 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/1 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/2 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/3 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   wait
   pushd ./tmp/4 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/5 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/6 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/7 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   wait
   pushd ./tmp/8 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/9 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts --quiet &
   popd > /dev/null
   pushd ./tmp/10 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   pushd ./tmp/11 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   wait
   pushd ./tmp/12 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   pushd ./tmp/13 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   pushd ./tmp/14 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   pushd ./tmp/15 > /dev/null
-  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="v0.4.24+commit.e67f0147" \
+  npx solcpiler -i ./contracts/ERC820Registry.sol --solc-version="${SOLC_VERSION}" \
     --insert-file-names none --output-artifacts-dir artifacts  --quiet &
   popd > /dev/null
   wait

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.2;
 
 import "./ERC820Client.sol";
 
@@ -8,7 +8,7 @@ contract ExampleClient is ERC820Client {
     address private owner;
 
     constructor() public {
-        setInterfaceImplementation("ExampleClient", this);
+        setInterfaceImplementation("ExampleClient", address(this));
         owner = msg.sender;
     }
 

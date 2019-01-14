@@ -1,6 +1,6 @@
 {
   "name": "erc820",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "ERC 820 - Pseudo-introspaection using a registry contract",
   "main": "index.js",
   "files": [
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "lint:sol": "npx solium --reporter pretty --dir contracts",
-    "build:sol": "solcpiler -i './contracts/*.sol' --solc-version=\"v0.4.24+commit.e67f0147\" --output-artifacts-dir artifacts --insert-file-names imports",
+    "build:sol": "solcpiler -i './contracts/*.sol' --solc-version=\"0.5.2+commit.1df8f40c\" --output-artifacts-dir artifacts --insert-file-names imports",
     "build": "npm run clean && npm run build:sol",
     "test": "npm run build && mocha --harmony",
     "clean": "rm -rf build artifacts",
@@ -54,7 +54,7 @@
     "chai-as-promised": "7.1.1",
     "ganache-cli": "6.1.8",
     "mocha": "4.1.0",
-    "solc": "0.4.24",
+    "solc": "0.5.2",
     "solcpiler": "1.0.0-beta.9",
     "solium": "^1.1.8"
   }
